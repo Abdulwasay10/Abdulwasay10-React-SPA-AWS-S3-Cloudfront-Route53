@@ -70,12 +70,13 @@ In React project, run:
 
      - Upload all contents of build/ to S3 bucket
 
+<img width="1104" height="548" alt="Screenshot from 2025-09-24 17-09-31" src="https://github.com/user-attachments/assets/631a330c-c294-4568-8b80-cbd592e22654" />
 
 
      - Confirm files exist:
 
 
-        index.html, favicon.ico, static/ (JS, CSS), manifest.json
+     index.html, favicon.ico, static/ (JS, CSS), manifest.json
 
 
 
@@ -87,6 +88,7 @@ In React project, run:
 
      - Origin Domain: awss3deploy.s3.amazonaws.com (NOT website endpoint)
 
+<img width="837" height="307" alt="image" src="https://github.com/user-attachments/assets/38079d07-fda1-42f6-98c6-fea6aa9bf6e2" />
 
 
      - Origin Access Control (OAC): Create → attach → allows CloudFront to fetch private bucket content
@@ -255,6 +257,7 @@ In React project, run:
 
 
      - S3 bucket is private → direct access denied
+
 
 
 
