@@ -1,4 +1,5 @@
-# Project: React SPA Deployment on AWS (S3 + CloudFront + HTTPS + Route 53 Domain)
+# Project: React file:///home/abdulwasay/Pictures/Screenshots/Screenshot%20from%202025-09-24%2017-09-31.png
+SPA Deployment on AWS (S3 + CloudFront + HTTPS + Route 53 Domain)
 
 ## 1. Project Overview
 This project demonstrates deploying a React Single Page Application (SPA) on AWS S3 with CloudFront CDN for secure and scalable delivery, using a custom domain purchased from Route 53.
@@ -253,6 +254,7 @@ In React project, run:
 
 
      - S3 bucket is private → direct access denied
+
 
 
 
