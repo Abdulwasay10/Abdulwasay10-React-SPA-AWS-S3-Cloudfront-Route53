@@ -92,10 +92,8 @@ index.html, favicon.ico, static/ (JS, CSS), manifest.json
 
 - Origin Access Control (OAC): Create → attach → allows CloudFront to fetch private bucket content
 
-<img width="1279" height="637" alt="Screenshot from 2025-09-24 14-50-16" src="https://github.com/user-attachments/assets/e417db55-663e-4a4b-a3ef-3d822e7bb515" />
-
-
 - Default Root Object: index.html
+
 
 <img width="1279" height="637" alt="Screenshot from 2025-09-24 14-50-03" src="https://github.com/user-attachments/assets/8007ca9c-81f7-449a-abdb-bcf8ea288f77" />
 
@@ -112,15 +110,14 @@ index.html, favicon.ico, static/ (JS, CSS), manifest.json
 <img width="1279" height="637" alt="Screenshot from 2025-09-24 14-50-03" src="https://github.com/user-attachments/assets/7b12c325-e6cb-4119-a5ba-6e69be3a82be" />
 
 
-
 ### Step 5: Configure Bucket Policy
 
 - Make bucket private
      
-<img width="1279" height="637" alt="Screenshot from 2025-09-24 14-49-50" src="https://github.com/user-attachments/assets/26447e21-37b7-4f71-bc8f-c3b3bc0b7092" />
-
 - Add CloudFront OAC access policy (You can directly copy it while attaching (OAC) to Cloud front, screenshot attached in Step 4):
+  
 
+<img width="1118" height="578" alt="Screenshot from 2025-09-24 17-19-32" src="https://github.com/user-attachments/assets/77ece4f0-349b-423a-a670-1e7c2d309f2a" />
 
 
 ```bash
@@ -230,6 +227,7 @@ index.html, favicon.ico, static/ (JS, CSS), manifest.json
 
 
 <img width="1279" height="637" alt="Screenshot from 2025-09-24 14-56-33" src="https://github.com/user-attachments/assets/b30fe8dd-845b-4c65-8a0b-28b057db5339" />
+
 
 
 
