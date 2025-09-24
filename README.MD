@@ -152,7 +152,7 @@ In React project, run:
 ```
 
 
-###Step 6: Test the Cloudfront Endpoint and security
+### Step 6: Test the Cloudfront Endpoint and security
 
      - Go to your Cloudfront distribution and copy the Distribution Domain Name
 
@@ -255,6 +255,7 @@ In React project, run:
 
 
      - S3 bucket is private → direct access denied
+
 
 
 
