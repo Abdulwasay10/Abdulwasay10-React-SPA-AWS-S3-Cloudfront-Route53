@@ -25,7 +25,6 @@ This project demonstrates deploying a React Single Page Application (SPA) on AWS
 - Budget for domain purchase (Route 53)
 
 
-
 ## 3. Steps
 
 ### Step 1: Buy a Domain in Route 53
@@ -43,23 +42,13 @@ This project demonstrates deploying a React Single Page Application (SPA) on AWS
 
 - Go to S3 → Create Bucket
 
-
 - Name: awss3deploy (bucket name must be globally unique)
-
 
 - Region: us-east-1
 
-
 - Block all public access → Yes (we will use CloudFront OAC)
 
-
 - Enable static website hosting (optional for testing)
-
-
-
-
-
-
 
 
 
@@ -70,6 +59,7 @@ In React project, run:
 
 - Upload all contents of build/ to S3 bucket
 
+
 <img width="1104" height="548" alt="Screenshot from 2025-09-24 17-09-31" src="https://github.com/user-attachments/assets/631a330c-c294-4568-8b80-cbd592e22654" />
 
 
@@ -79,13 +69,10 @@ index.html, favicon.ico, static/ (JS, CSS), manifest.json
 
 
 
-
-
-
-
 ### Step 4: Create CloudFront Distribution
 
 - Origin Domain: awss3deploy.s3.amazonaws.com (NOT website endpoint)
+
 
 <img width="837" height="307" alt="image" src="https://github.com/user-attachments/assets/38079d07-fda1-42f6-98c6-fea6aa9bf6e2" />
 
@@ -100,9 +87,7 @@ index.html, favicon.ico, static/ (JS, CSS), manifest.json
 
 - Viewer Protocol Policy: Redirect HTTP to HTTPS
 
-
 - Path Pattern * → origin = S3 bucket + OAC
-
 
 - Enable Origin Shield (optional for caching)
 
@@ -148,19 +133,24 @@ index.html, favicon.ico, static/ (JS, CSS), manifest.json
 
 - Go to your Cloudfront distribution and copy the Distribution Domain Name
 
+
 <img width="531" height="99" alt="image" src="https://github.com/user-attachments/assets/63b4e257-3cd3-46e8-befd-9aaffee03ecc" />
 
   
 - Access it from a browser, you should see your react application:
+
 
 <img width="1279" height="637" alt="Screenshot from 2025-09-24 14-49-19" src="https://github.com/user-attachments/assets/a41302ea-21a3-4d72-bd50-529625ffe643" />
 
 
 - Inspect the site, go to Networks tab you should see the Rerouting from S3 to Cloudfront:
 
+
  <img width="812" height="249" alt="Screenshot from 2025-09-24 13-41-46" src="https://github.com/user-attachments/assets/b1a26374-c8f5-4513-97e8-0b6adcb9c8b6" />
 
+
 - To check that S3 is only exposed to cloudfront, copy the object url of index.html from S3 bucket and browse it, it should give an error:
+
 
 <img width="880" height="238" alt="image" src="https://github.com/user-attachments/assets/14a93892-6b59-4a17-9a92-f5cc0b34cd30" />
 
@@ -169,15 +159,12 @@ index.html, favicon.ico, static/ (JS, CSS), manifest.json
 
 - Go to AWS Certificate Manager (ACM) → US East (N. Virginia)
 
-
 - Request certificate for your domain:
       Eg “wasayali.com”
 
 - Validate DNS (CNAME) → ACM provides CNAME → add in Route 53 hosted zone
 
-
 - Certificate status becomes Issued
-
 
 
 ### Step 8: Configure CloudFront for Custom Domain + HTTPS
@@ -208,7 +195,9 @@ index.html, favicon.ico, static/ (JS, CSS), manifest.json
 
 - After each update to build → CloudFront → Invalidations → Object Paths: /*
 
+
 <img width="1157" height="231" alt="image" src="https://github.com/user-attachments/assets/b38fc488-f0d8-4e72-9f7e-9633bb89dca5" />
+
 
 - Ensures updated content served to users
 
@@ -219,14 +208,13 @@ index.html, favicon.ico, static/ (JS, CSS), manifest.json
 
    Expected behavior:
 
-
    - Loads index.html → JS renders SPA pages
-
 
    - S3 bucket is private → direct access denied
 
 
 <img width="1279" height="637" alt="Screenshot from 2025-09-24 14-56-33" src="https://github.com/user-attachments/assets/b30fe8dd-845b-4c65-8a0b-28b057db5339" />
+
 
 
 
