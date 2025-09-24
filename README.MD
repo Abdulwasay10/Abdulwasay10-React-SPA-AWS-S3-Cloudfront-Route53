@@ -128,7 +128,8 @@ In React project, run:
 
 
 
-{
+```bash
+   {
   "Version": "2008-10-17",
   "Id": "PolicyForCloudFrontPrivateContent",
   "Statement": [
@@ -148,6 +149,7 @@ In React project, run:
     }
   ]
 }
+```
 
 
 ###Step 6: Test the Cloudfront Endpoint and security
@@ -253,6 +255,7 @@ In React project, run:
 
 
      - S3 bucket is private → direct access denied
+
 
 
 
